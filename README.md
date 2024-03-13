@@ -55,7 +55,8 @@ Os assuntos vistos em aula serão listados aqui.
 
 |    N |   data | assunto
 | ---: | -----: | :--------
-|    1 |  12mar | apresentação, introdução
+|    1 |  12mar | apresentação, [introdução](Aulas/01.md)
+|    2 |  14mar | meu primeiro programa C
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
