@@ -59,7 +59,8 @@ Os assuntos vistos em aula serão listados aqui.
 |    2 |  14mar | [meu primeiro programa C](Aulas/02.md)
 |    3 |  19mar | [meu primeiro programa C, cont.](Aulas/03.md)
 |    4 |  21mar | [não aguento mais o meu primeiro programa C!](Aulas/04.md)
-|    5 |  26mar | [printf](Aulas/05.md)
+|    5 |  26mar | [saída de dados com printf](Aulas/05.md)
+|    6 |  28mar | [entrada de dados com scanf](Aulas/06.md)
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
@@ -80,6 +81,7 @@ A descrição dos trabalhos a entregar será colocada abaixo.
 
 |     N |     prazo | descrição
 | ----: | --------: | :-----------
+|     1 | 4abr, <12h | [t1](Trabalhos/t1.md)
 
 ## Notas
 
