@@ -61,6 +61,7 @@ Os assuntos vistos em aula serão listados aqui.
 |    4 |  21mar | [não aguento mais o meu primeiro programa C!](Aulas/04.md)
 |    5 |  26mar | [saída de dados com printf](Aulas/05.md)
 |    6 |  28mar | [entrada de dados com scanf](Aulas/06.md)
+|    7 |   2abr | [comandos de seleção](Aulas/07.md)
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
