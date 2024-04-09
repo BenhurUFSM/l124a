@@ -63,6 +63,7 @@ Os assuntos vistos em aula serão listados aqui.
 |    6 |  28mar | [entrada de dados com scanf](Aulas/06.md)
 |    7 |   2abr | [comandos de seleção](Aulas/07.md)
 |    8 |   4abr | [comandos de repetição](Aulas/08.md)
+|    9 |   9abr | [como é o *for* mesmo?](Aulas/09.md)
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
