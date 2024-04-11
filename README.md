@@ -3,6 +3,7 @@
 Disciplina de Laboratório de Programação I, 1° semestre de 2024
 ELC1065 DLSC/CT/UFSM\
 professor: Benhur Stein ([benhur+l124a@inf.ufsm.br](mailto:benhur%2bl124a@inf.ufsm.br))\
+monitor: Leandro Nascimento [lonascimento@inf.ufsm.br](mailto:lonascimento@inf.ufsm.br))\
 terças e quintas, 14h30\
 sala 334, prédio 7 (principal do CT)\
 
@@ -64,6 +65,7 @@ Os assuntos vistos em aula serão listados aqui.
 |    7 |   2abr | [comandos de seleção](Aulas/07.md)
 |    8 |   4abr | [comandos de repetição](Aulas/08.md)
 |    9 |   9abr | [como é o *for* mesmo?](Aulas/09.md)
+|   10 |  11abr | [exercícios de repetição](Aulas/10.md)
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
