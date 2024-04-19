@@ -66,6 +66,8 @@ Os assuntos vistos em aula serão listados aqui.
 |    8 |   4abr | [comandos de repetição](Aulas/08.md)
 |    9 |   9abr | [como é o *for* mesmo?](Aulas/09.md)
 |   10 |  11abr | [exercícios de repetição](Aulas/10.md)
+|   11 |  16abr | mais exercícios de repetição
+|   12 |  18abr | [vetores](Aulas/12.md)
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
