@@ -68,6 +68,7 @@ Os assuntos vistos em aula serão listados aqui.
 |   10 |  11abr | [exercícios de repetição](Aulas/10.md)
 |   11 |  16abr | mais exercícios de repetição
 |   12 |  18abr | [vetores](Aulas/12.md)
+|   13 |  23abr | [vetores como argumentos](Aulas/13.md)
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
