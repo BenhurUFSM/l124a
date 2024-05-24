@@ -1,3 +1,14 @@
+// tecla.h
+// contém declarações de funções para permitir o acesso ao teclado
+// sem bufferização, dando acesso às teclas digitadas ao programa tão
+// logo elas tenham sido digitadas, sem esperar por «enter»
+//
+// a bufferização é desligada por tecla_ini (que deve ser chamada no início
+// do programa), e religada por tecla_fim (que deve ser chamada no final).
+// A função tecla_le_char permite a leitura de um caractere.
+// As funções habituais de leitura (getchar, scanf, etc) não funcionam muito
+// bem quando a bufferização está desabilitada, e não devem ser usadas.
+
 #ifndef TECLA_H
 #define TECLA_H
 

@@ -1,5 +1,11 @@
 #include "tecla.h"
 
+// recomendo nem olhar o que tem aqui, usa várias coisas que não vimos ainda,
+// para realizar operações que são realizadas diretamente por uma quantidade
+// irrisória de programas.
+
+// includes incomuns, para se ter acesso a funções incomuns que permiter
+// configurar o modo de funcionamento da entrada do terminal
 #include <termios.h>
 #include <unistd.h>
 
@@ -35,6 +41,7 @@ void tecla_fim(void)
 char tecla_le_char(void)
 {
   char a;
+  // lê um caractere da entrada, e verifica quantos caracteres foram lidos
   if (read(1, &a, 1) != 1) {
     return 0; // nada foi digitado
   }

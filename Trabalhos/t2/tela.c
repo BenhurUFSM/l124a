@@ -1,20 +1,23 @@
 #include "tela.h"
 
-// implementado usando
-//   - sequências de escape ANSI para controlar a saída (cursor, cores)
-//   - ioctl para descobrir o tamanho do terminal
-//   - signal para ser sinalizado quando o terminal mudar de tamanho
-//   - clock_gettime para obter o valor do relógio com boa resolução
+// A maior parte das funções é implementada enviando sequências especiais
+// de caracteres para controlar o funcionamento do terminal.
+// Essas sequências são conhecidas como sequências de escape ANSI. Pode
+// encontrar uma descrição delas (e de uma enormidade de outras) em
+//   https://en.wikipedia.org/wiki/ANSI_escape_code
 
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 
+// alguns includes incomuns, para acesso a funções incomuns de controle
+// de baixo nível de terminal
 #include <sys/ioctl.h>
 #include <fcntl.h>
 
-
+// o "static" na declaração de uma função faz com que ela seja invisível
+// a código que esteja em outros arquivos
 static void tela_altera_modo_saida(void)
 {
   // faz com que os caracteres impressos sejam enviados para uma
@@ -65,6 +68,7 @@ void tela_atualiza(void)
 void tela_limpa(void)
 {
   printf("%c[2J", 27);
+  tela_lincol(1, 1);
 }
 
 void tela_lincol(int lin, int col)

@@ -1,8 +1,19 @@
 // tela.h
 // ------
-// funções para controlar a impressão no terminal
+// Este arquivo contém as declarações de funções para controlar a impressão
+// no terminal.
+// As funções estão implementadas no arquivo tela.c.
+// Para poder ter acesso a estas funções, o programa deve incluir este arquivo,
+// com o comando
+//    #include "tela.h"
 //
+// Para poder usar as funções de controle, primeiro deve ser chamada a função
+// tela_ini.
+// Quando o programa não for mais usar o terminal dessa forma, deve chamar a
+// função tela_fim.
 
+// esses dois comandos (em comjunto com o #endif no final do arquivo) servem
+// para evitar redefinições caso este arquivo seja incluído mais de uma vez
 #ifndef TELA_H
 #define TELA_H
 
@@ -17,7 +28,7 @@ void tela_fim(void);
 // limpa a tela
 void tela_limpa(void);
 
-// posiciona o cursor (0,0 é o canto superior esquerdo)
+// posiciona o cursor (1,1 é o canto superior esquerdo)
 void tela_lincol(int lin, int col);
 
 // cor normal para as próximas impressões
