@@ -72,6 +72,7 @@ Os assuntos vistos em aula serão listados aqui.
 |   14 |  25abr | [strings](Aulas/14.md)
 |   15 |  30abr | Exercícios. Mais exercícios em [15](Aulas/15.md)
 |   16 |  21mai | [matrizes](Aulas/16.md)
+|   17 |  23mai | conversa sobre o t2 (ver abaixo)
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
@@ -93,6 +94,7 @@ A descrição dos trabalhos a entregar será colocada abaixo.
 |     N |     prazo | descrição
 | ----: | --------: | :-----------
 |     1 | 4abr, <12h | [t1](Trabalhos/t1.md)
+|     2 |           | [jogo da velha](Trabalhos/t2.md)
 
 ## Notas
 
