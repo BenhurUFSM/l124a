@@ -73,6 +73,7 @@ Os assuntos vistos em aula serão listados aqui.
 |   15 |  30abr | Exercícios. Mais exercícios em [15](Aulas/15.md)
 |   16 |  21mai | [matrizes](Aulas/16.md)
 |   17 |  23mai | conversa sobre o t2 (ver abaixo)
+|   18 |  28mai | conversa sobre o t2
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
