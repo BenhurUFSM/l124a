@@ -74,6 +74,7 @@ Os assuntos vistos em aula serão listados aqui.
 |   16 |  21mai | [matrizes](Aulas/16.md)
 |   17 |  23mai | conversa sobre o t2 (ver abaixo)
 |   18 |  28mai | conversa sobre o t2
+|   19 |   4jun | [referências (ponteiros)](Aulas/19.md), tela gráfica no t2
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
