@@ -53,3 +53,5 @@ As alterações independentes da entrada consiste em alterar o estado de términ
 O desenho da tela deve colocar na tela, pelo menos, a identificação do jogador corrente e o desenho do conteúdo do tabuleiro, com a posição corrente em destaque.
 
 Deve haver no programa um comentário indicando o início de cada uma das 4 seções da estrutura geral e das 3 seções do laço principal (marcados com **deve conter** no texto acima).
+
+O programa deve usar as funções de tela.h+tecla.h ou de telag.h. O programa testa.c contém um programa simples para exemplificar o uso das funções em tela.h+tecla.h, com um comentário no início de como compilar. Idem para o programa testag.c em relação à telag.h.
