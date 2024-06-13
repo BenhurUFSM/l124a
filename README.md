@@ -99,7 +99,7 @@ A descrição dos trabalhos a entregar será colocada abaixo.
 |     N |     prazo | descrição
 | ----: | --------: | :-----------
 |     1 | 4abr, <12h | [t1](Trabalhos/t1.md)
-|     2 |           | [jogo da velha](Trabalhos/t2)
+|     2 | 18jun, <12h | [jogo da velha](Trabalhos/t2)
 
 ## Notas
 
