@@ -1,6 +1,6 @@
 ## t3 — sudoku
 
-***Esta descrição está incompleta; falta também a nova versão de telag***
+***Esta descrição está incompleta; ~falta também a nova versão de telag~***
 
 Você deve implementar um programa que permita jogar sudoku, conforme descrito a seguir.
 
@@ -8,7 +8,7 @@ O programa deve propor um jogo ao usuário, permitir que ele jogue ou abandone, 
 
 O jogo proposto deve ser uma das várias combinações de tabuleiro iniciais mantidas em um arquivo.
 
-O programa deve ser implementado usando as funções descritas em telag2.h, que necessitam a biblioteca allegro.
+O programa deve ser implementado usando as funções descritas em telag2.h (implementadas em telag2.c, exemplificadas em testa_telag2.c), que necessitam a biblioteca allegro.
 
 ### Como funciona o sudoku
 
