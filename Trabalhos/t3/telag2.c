@@ -13,7 +13,7 @@ static void cai_fora(char *msg)
 {
   int cai = 42;
   int fora = 42;
-  printf("\n\nERRO\n%s\n\n", msg);
+  fprintf(stderr, "\n\nERRO\n%s\n\n", msg);
   assert(cai-fora);
 }
 
@@ -145,9 +145,11 @@ static ALLEGRO_FONT *tela_fonte(int tam)
   fonte = al_load_font("DejaVuSans.ttf", tam, 0);
   if (fonte == NULL) {
     al_uninstall_system();
-    printf("\n\nERRO FATAL\n");
-    printf("ARQUIVO QUE DEFINE DESENHO DAS LETRAS (DejaVuSans.ttf) NAO ENCONTRADO.\n"
-           "COPIE ESSE ARQUIVO, OU MUDE telag.c PARA USAR UM ARQUIVO QUE EXISTA.\n\n");
+    fprintf(stderr,
+            "\n\nERRO FATAL\n"
+            "O ARQUIVO COM O DESENHO DAS LETRAS (DejaVuSans.ttf) NAO FOI ENCONTRADO.\n"
+            "COPIE ESSE ARQUIVO, OU MUDE telag2.c PARA USAR UM QUE EXISTA.\n"
+            " (pode ser tambem que tela_inicio() nao tenha sido chamada)\n");
     exit(1);
   }
 
@@ -208,12 +210,18 @@ rato_t tela_rato()
   return rato;
 }
 
+static bool t_shift, t_control;
+
+bool tela_shift() { return t_shift; }
+bool tela_control() { return t_control; }
 
 char tela_tecla(void)
 {
   ALLEGRO_EVENT ev;
 
   while (al_get_next_event(tela_eventos_teclado, &ev)) {
+    t_shift = ev.keyboard.modifiers & ALLEGRO_KEYMOD_SHIFT;
+    t_control = ev.keyboard.modifiers & ALLEGRO_KEYMOD_CTRL;
     if (ev.type == ALLEGRO_EVENT_KEY_CHAR) {
       int k = ev.keyboard.keycode;
       switch (k) {

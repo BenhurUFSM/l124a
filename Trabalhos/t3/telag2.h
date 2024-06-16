@@ -103,6 +103,9 @@ rato_t tela_rato();
 // se for digitado backspace, retorna '\b'
 char tela_tecla(void);
 
+// retorna o estado das teclas shift e control (true se apertadas)
+bool tela_shift();
+bool tela_control();
 
 // TEMPO
 
