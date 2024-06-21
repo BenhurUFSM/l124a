@@ -78,6 +78,8 @@ Os assuntos vistos em aula serão listados aqui.
 |   20 |   6jun | [registros (*struct*)](Aulas/20.md)
 |   21 |  11jun | [arquivos](Aulas/21.md)
 |   22 |  13jun | [alocação dinâmica](Aulas/22.md)
+|   23 |  18jun | conversa sobre o t3
+|   24 |  20jun | conversa sobre dúvidas
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
@@ -100,6 +102,7 @@ A descrição dos trabalhos a entregar será colocada abaixo.
 | ----: | --------: | :-----------
 |     1 | 4abr, <12h | [t1](Trabalhos/t1.md)
 |     2 | 18jun, <12h | [jogo da velha](Trabalhos/t2)
+|     3 |           | [sudoku](Trabalhos/t3)
 
 ## Notas
 
