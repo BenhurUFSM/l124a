@@ -56,6 +56,13 @@ Uma partida termina se for cancelada pelo jogador (após confirmação) ou se o 
 
 ### Formato do arquivo de tabuleiros
 
+A primeira linha do arquivo tem o número de tabuleiros que o arquivo contém.
+
+Cada tabuleiro inicia com sua identificação (um número menor que 10000) e sua dificuldade (0-fácil, 1-médio, 2-difícil, 3-osco), seguido por 9 linhas de 9 números com o conteúdo inicial do tabuleiro (0 representa uma casa vazia).
+
 ### Formato de arquivo de pontuações 
+
+Cada linha contém a identificação da pessoa, a identificação do tabuleiro e a pontuação. 
+As linhas estão em ordem decrescente de pontuação.
 
 ### Cálculo de pontos
