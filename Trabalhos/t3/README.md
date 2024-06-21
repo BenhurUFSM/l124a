@@ -54,15 +54,36 @@ Caso queira, pode ser feita uma interface completa de teclado, com teclas para a
 
 Uma partida termina se for cancelada pelo jogador (após confirmação) ou se o tabuleiro for completamente preenchido.
 
+Após o final da partida e apresentação de pontuação (se for o caso, veja abaixo), o programa deve oferecer a opção de jogar nova partida ou encerrar o programa.
+
+### Registro de pontos
+
+Ao final de uma partida não cancelada, os pontos finais dever ser apresentados ao usuário, juntamente com sua classificação no registro geral de pontuações. O programa deve também apresentar, pelo menos, os dados de pontuação imediatamente anterior e posterior (caso houver).
+
+A pontuação deve ser acrescentada ao arquivo de registro de pontuação. A identificação do jogador (uma pequena string sem espaços) pode ser pedida no início da execução do programa ou no final da partida.
+
+Dica: leia o arquivo inteiro para um vetor no início do programa. Use as informações do vetor para apresentar ao usuário no final da partida. Altere o vetor no final da partida para incluir a nova pontuação. Grave o arquivo inteiro após a alteração. Dessa forma, só precisa de 2 funções que acessam o arquivo de pontuação: uma de leitura que só é usada uma vez no início e uma de escrita que é chamada a cada final de partida. A função de leitura, caso o arquivo não exista, deve criar um vetor vazio, a inexistência do arquivo não deve ser considerada um erro.
+
 ### Formato do arquivo de tabuleiros
 
 A primeira linha do arquivo tem o número de tabuleiros que o arquivo contém.
 
 Cada tabuleiro inicia com sua identificação (um número menor que 10000) e sua dificuldade (0-fácil, 1-médio, 2-difícil, 3-osco), seguido por 9 linhas de 9 números com o conteúdo inicial do tabuleiro (0 representa uma casa vazia).
 
+O arquivo `tabuleiros` contém um conjunto de tabuleiros nesse formato.
+
 ### Formato de arquivo de pontuações 
 
-Cada linha contém a identificação da pessoa, a identificação do tabuleiro e a pontuação. 
+A primeira linha contém o número de pontuações no arquivo.
+
+Cada linha subsequente contém a identificação da pessoa, a identificação do tabuleiro e a pontuação. 
 As linhas estão em ordem decrescente de pontuação.
 
+O arquivo `recordes` contém um exemplo de um arquivo nesse formato.
+
 ### Cálculo de pontos
+
+A pontuação de uma partida é calculada à partir da dificuldade do jogo (0 a 4) e do tempo (em segundos) usado para resolvê-lo, de acordo com a fórmula abaixo:
+```
+   1285 + 97418 × ( dificuldade + 1 ) ÷ tempo
+```
