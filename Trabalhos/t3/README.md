@@ -1,6 +1,6 @@
 ## t3 — sudoku
 
-***Esta descrição pode ser complementada conforme surgirem dúvidas. Não chute uma interpretação, se tiver dúvida, pergunte.***
+***Esta descrição pode ser complementada conforme surgirem dúvidas. Não chute uma interpretação; se tiver dúvida, pergunte. Consulte esta descrição de quando em vez (e os logs do git).***
 
 Você deve implementar um programa que permita jogar sudoku, conforme descrito a seguir.
 
