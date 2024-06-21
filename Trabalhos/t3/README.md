@@ -1,6 +1,6 @@
 ## t3 — sudoku
 
-***Esta descrição está incompleta; ~falta também a nova versão de telag~***
+***Esta descrição pode ser complementada conforme surgirem dúvidas. Não chute uma interpretação, se tiver dúvida, pergunte.***
 
 Você deve implementar um programa que permita jogar sudoku, conforme descrito a seguir.
 
@@ -52,7 +52,7 @@ Caso queira, pode ser feita uma interface completa de teclado, com teclas para a
 
 ### Início de uma partida
 
-O programa deve sortear um dos tabuleiros do arquivo de tabuleiros que ainda não tenha sido jogado pelo jogador atual.
+O programa deve sortear um dos tabuleiros do arquivo de tabuleiros para ser preenchido pelo jogador.
 
 ### Final de uma partida
 
