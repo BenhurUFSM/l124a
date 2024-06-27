@@ -122,27 +122,20 @@ void tela_retangulo(retangulo_t retangulo, float largura,
 
 // retorna uma fonte com o tamanho pedido
 #define N_FONTES 5  // número de fontes a guardar
-static int soma_indice(int indice, int soma)
-{
-  return (indice + soma + N_FONTES) % N_FONTES;
-}
 static ALLEGRO_FONT *tela_fonte(int tam)
 {
   static struct {
     int tamanho;
     ALLEGRO_FONT *fonte;
-  } fontes[N_FONTES];
+  } fontes[N_FONTES] = { { 0, NULL } };
   static int prox_indice = 0;
-  static int n_indices = 0;
 
-  for (int i = 0; i < n_indices; i++) {
-    int indice = soma_indice(prox_indice, -(i+1));
-    if (fontes[indice].tamanho == tam) return fontes[i].fonte;
+  for (int i = 0; i < N_FONTES; i++) {
+    if (fontes[i].tamanho == tam) return fontes[i].fonte;
   } 
 
   // carrega uma fonte, para poder escrever na tela
   ALLEGRO_FONT *fonte = al_load_font("DejaVuSans.ttf", tam, 0);
-  fonte = al_load_font("DejaVuSans.ttf", tam, 0);
   if (fonte == NULL) {
     al_uninstall_system();
     fprintf(stderr,
@@ -154,14 +147,15 @@ static ALLEGRO_FONT *tela_fonte(int tam)
   }
 
   // se ja tinha uma fonte carregada, livra-se dela antes de carregar outra
-  if (n_indices == N_FONTES && fontes[prox_indice].fonte != NULL) {
+  if (fontes[prox_indice].fonte != NULL) {
     al_destroy_font(fontes[prox_indice].fonte);
-  } else {
-    n_indices++;
   }
   fontes[prox_indice].fonte = fonte;
   fontes[prox_indice].tamanho = tam;
-  prox_indice = soma_indice(prox_indice, 1);
+  prox_indice++;
+  if (prox_indice >= N_FONTES) {
+    prox_indice = 0;
+  }
 
   return fonte;
 }
