@@ -1,6 +1,6 @@
 ## t3 — sudoku
 
-***Esta descrição está incompleta; ~falta também a nova versão de telag~***
+***Esta descrição pode ser complementada conforme surgirem dúvidas. Não chute uma interpretação; se tiver dúvida, pergunte. Consulte esta descrição de quando em vez (e os logs do git).***
 
 Você deve implementar um programa que permita jogar sudoku, conforme descrito a seguir.
 
@@ -50,12 +50,50 @@ O teclado também deve poder ser usado: teclas de 0 a 9 alteram o valor da próx
 
 Caso queira, pode ser feita uma interface completa de teclado, com teclas para alterar a casa corrente, para jogar o valor atual e para realizar marcação.
 
+### Início de uma partida
+
+O programa deve sortear um dos tabuleiros do arquivo de tabuleiros para ser preenchido pelo jogador.
+
 ### Final de uma partida
 
 Uma partida termina se for cancelada pelo jogador (após confirmação) ou se o tabuleiro for completamente preenchido.
 
+Após o final da partida e apresentação de pontuação (se for o caso, veja abaixo), o programa deve oferecer a opção de jogar nova partida ou encerrar o programa.
+
+### Registro de pontos
+
+Ao final de uma partida não cancelada, os pontos finais dever ser apresentados ao usuário, juntamente com sua classificação no registro geral de pontuações. O programa deve também apresentar, pelo menos, os dados de pontuação imediatamente anterior e posterior (caso houver).
+
+A pontuação deve ser acrescentada ao arquivo de registro de pontuação. A identificação do jogador (uma pequena string sem espaços) deve ser pedida no início da execução do programa. Use uma identificação default caso o usuário forneça uma identificação vazia.
+
+O número de pontuações registradas pode ser qualquer, e as pontuações devem ser mantidas em um vetor de estruturas, cada estrutura contendo os dados de uma pontuação (identificação do jogador, identificação do tabuleiro e número de pontos). Esse vetor deve ser alocado dinamicamente.
+
+A inexistência do arquivo de registro de pontos não deve ser considerada um erro.
+
+Dica: leia o arquivo inteiro para um vetor no início do programa. Use as informações do vetor para apresentar ao usuário no final da partida. Altere o vetor no final da partida para incluir a nova pontuação. Grave o arquivo inteiro após a alteração. Dessa forma, só precisa de 2 funções que acessam o arquivo de pontuação: uma de leitura que só é usada uma vez no início e uma de escrita que é chamada a cada final de partida. A função de leitura, caso o arquivo não exista, deve criar um vetor vazio.
+
+Outra forma de implementação, que não requer a realocação do vetor para incluir a nova pontuação é gravar o arquivo em 3 etapas: todas as pontuações do vetor menores que a da última partida, seguida da pontuação da última partida, seguida das demais pontuações do vetor. Então libera a memória do vetor e chama a função de leitura do arquivo, que irá criar novamente o vetor, com o novo tamanho encontrado no arquivo. Não precisa realocar, mas dá muito mais trabalho para o computador...
+
 ### Formato do arquivo de tabuleiros
+
+A primeira linha do arquivo tem o número de tabuleiros que o arquivo contém.
+
+Cada tabuleiro inicia com sua identificação (um número menor que 10000) e sua dificuldade (0-fácil, 1-médio, 2-difícil, 3-osco), seguido por 9 linhas de 9 números com o conteúdo inicial do tabuleiro (0 representa uma casa vazia).
+
+O arquivo `tabuleiros` contém um conjunto de tabuleiros nesse formato.
 
 ### Formato de arquivo de pontuações 
 
+A primeira linha contém o número de pontuações no arquivo.
+
+Cada linha subsequente contém a identificação da pessoa, a identificação do tabuleiro e a pontuação. 
+As linhas estão em ordem decrescente de pontuação.
+
+O arquivo `recordes` contém um exemplo de um arquivo nesse formato.
+
 ### Cálculo de pontos
+
+A pontuação de uma partida é calculada à partir da dificuldade do jogo (0 a 4) e do tempo (em segundos) usado para resolvê-lo, de acordo com a fórmula abaixo:
+```
+   1285 + 97418 × ( dificuldade + 1 ) ÷ tempo
+```
