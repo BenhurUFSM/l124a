@@ -82,6 +82,8 @@ Os assuntos vistos em aula serão listados aqui.
 |   22 |  13jun | [alocação dinâmica](Aulas/22.md)
 |   23 |  18jun | conversa sobre o t3
 |   24 |  20jun | conversa sobre dúvidas
+|   25 |  25jun | conversa sobre dúvidas
+|   26 |  27jun | conversa sobre dúvidas
 
 Os principais conceitos que serão tratados na disciplina são:
 - tipos básicos de dados (char, int, bool, float, etc)
