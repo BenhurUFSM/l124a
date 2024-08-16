@@ -7,7 +7,7 @@ monitor: Leandro Nascimento [lonascimento@inf.ufsm.br](mailto:lonascimento@inf.u
 terças e quintas, 14h30\
 sala 334, prédio 7 (principal do CT)\
 
-## Exame: 20 de agosto de 2024, 10h30min, sala 376, anexo B do CT
+## Exame: 20 de agosto de 2024, 14h30min, sala 376, anexo B do CT
 
 Alunos em exame:
 | Nome | Média |
